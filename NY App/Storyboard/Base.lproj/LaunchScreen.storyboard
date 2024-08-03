@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,12 +20,35 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-screen-background" translatesAutoresizingMaskIntoConstraints="NO" id="ckB-bO-cfn">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1NZ-dj-kLx">
+                                <rect key="frame" x="146.66666666666666" y="358.33333333333331" width="100" height="135.66666666666669"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newspaper.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Jnx-HC-gmC">
+                                        <rect key="frame" x="0.0" y="0.3333333333333357" width="100" height="99.666666666666657"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="ImH-6R-mIf"/>
+                                            <constraint firstAttribute="width" constant="100" id="f7a-Ai-sbc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NY News" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNA-sz-caZ">
+                                        <rect key="frame" x="0.0" y="110" width="100" height="25.666666666666657"/>
+                                        <color key="tintColor" systemColor="systemBlueColor"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="23"/>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="tintColor" systemColor="systemBlueColor"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="1NZ-dj-kLx" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="M8w-Mv-XnT"/>
                             <constraint firstItem="ckB-bO-cfn" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Owm-e1-joS"/>
                             <constraint firstItem="ckB-bO-cfn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="amH-Np-M3d"/>
+                            <constraint firstItem="1NZ-dj-kLx" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="bgE-Eh-rbI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ckB-bO-cfn" secondAttribute="trailing" id="v0d-bK-mDg"/>
                             <constraint firstAttribute="bottom" secondItem="ckB-bO-cfn" secondAttribute="bottom" id="xNb-SL-W91"/>
                         </constraints>
@@ -36,9 +60,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="newspaper.fill" catalog="system" width="128" height="112"/>
         <image name="splash-screen-background" width="376" height="812"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

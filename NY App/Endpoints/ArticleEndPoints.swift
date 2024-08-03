@@ -9,12 +9,12 @@ import Foundation
 
 enum ArticleEndPoints: BaseApiConfiguration {
     
-    case articles(section: String, period: Int, key: String)
+    case articles(section: ArticleSectionEnum, period: ArticlePeriodEnum, key: String)
     
     var path: String {
         switch self {
         case .articles(let section, let period, let key):
-            return "mostpopular/v2/mostviewed/\(section)/\(period).json?api-key=\(key)"
+            return "mostviewed/\(section.rawValue)/\(period.rawValue).json?api-key=\(key)"
         }
     }
 }

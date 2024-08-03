@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		497E71BF2C5DC95B0099D0DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E71BE2C5DC95B0099D0DD /* AppDelegate.swift */; };
 		497E71C12C5DC95B0099D0DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E71C02C5DC95B0099D0DD /* SceneDelegate.swift */; };
-		497E71C62C5DC95B0099D0DD /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 497E71C52C5DC95B0099D0DD /* Base */; };
 		497E71C82C5DC95D0099D0DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 497E71C72C5DC95D0099D0DD /* Assets.xcassets */; };
 		497E71CB2C5DC95D0099D0DD /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 497E71CA2C5DC95D0099D0DD /* Base */; };
 		497E71D62C5DC95E0099D0DD /* NY_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E71D52C5DC95E0099D0DD /* NY_AppTests.swift */; };
@@ -27,6 +26,11 @@
 		497E720D2C5DCCC80099D0DD /* ArticleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E72062C5DCCC80099D0DD /* ArticleVC.swift */; };
 		497E72172C5DCDCA0099D0DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 497E71C42C5DC95B0099D0DD /* Main.storyboard */; };
 		497E72192C5E1B730099D0DD /* CheckNetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E72182C5E1B730099D0DD /* CheckNetworkReachability.swift */; };
+		497E721B2C5E1CC90099D0DD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E721A2C5E1CC90099D0DD /* NetworkManager.swift */; };
+		497E721D2C5E1E270099D0DD /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E721C2C5E1E270099D0DD /* NetworkConstants.swift */; };
+		497E721F2C5E215C0099D0DD /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E721E2C5E215C0099D0DD /* NetworkResponse.swift */; };
+		497E72212C5E28C20099D0DD /* ArticleEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E72202C5E28C20099D0DD /* ArticleEnum.swift */; };
+		497E72232C5E2A7F0099D0DD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E72222C5E2A7F0099D0DD /* Constants.swift */; };
 		795CD4C0FB63F959BC016459 /* Pods_NY_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9D9D337D699A5CB395A394 /* Pods_NY_App.framework */; };
 		CD27E4674FE3B80648C54664 /* Pods_NY_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515E1CD1D516F8B3D4A3ACB4 /* Pods_NY_AppTests.framework */; };
 		FC99AA8712884040AF030478 /* Pods_NY_App_NY_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1540C6E4A67E59A9E46CF2D1 /* Pods_NY_App_NY_AppUITests.framework */; };
@@ -77,6 +81,11 @@
 		497E72052C5DCCC80099D0DD /* ArticleListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListViewModel.swift; sourceTree = "<group>"; };
 		497E72062C5DCCC80099D0DD /* ArticleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleVC.swift; sourceTree = "<group>"; };
 		497E72182C5E1B730099D0DD /* CheckNetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckNetworkReachability.swift; sourceTree = "<group>"; };
+		497E721A2C5E1CC90099D0DD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		497E721C2C5E1E270099D0DD /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		497E721E2C5E215C0099D0DD /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		497E72202C5E28C20099D0DD /* ArticleEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleEnum.swift; sourceTree = "<group>"; };
+		497E72222C5E2A7F0099D0DD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		515E1CD1D516F8B3D4A3ACB4 /* Pods_NY_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NY_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64FD622096DA841553D66B61 /* Pods-NY App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NY App.release.xcconfig"; path = "Target Support Files/Pods-NY App/Pods-NY App.release.xcconfig"; sourceTree = "<group>"; };
 		8777206D0AB6C675BDA04EBF /* Pods-NY App-NY AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NY App-NY AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-NY App-NY AppUITests/Pods-NY App-NY AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -229,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				497E71FC2C5DCCA10099D0DD /* MyExtensions.swift */,
+				497E72222C5E2A7F0099D0DD /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -237,6 +247,9 @@
 			isa = PBXGroup;
 			children = (
 				497E72182C5E1B730099D0DD /* CheckNetworkReachability.swift */,
+				497E721A2C5E1CC90099D0DD /* NetworkManager.swift */,
+				497E721C2C5E1E270099D0DD /* NetworkConstants.swift */,
+				497E721E2C5E215C0099D0DD /* NetworkResponse.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -264,6 +277,7 @@
 				497E72042C5DCCC80099D0DD /* TableViewCell */,
 				497E72052C5DCCC80099D0DD /* ArticleListViewModel.swift */,
 				497E72062C5DCCC80099D0DD /* ArticleVC.swift */,
+				497E72202C5E28C20099D0DD /* ArticleEnum.swift */,
 			);
 			path = ArticlesVC;
 			sourceTree = "<group>";
@@ -399,7 +413,6 @@
 				497E72172C5DCDCA0099D0DD /* Main.storyboard in Resources */,
 				497E71C82C5DC95D0099D0DD /* Assets.xcassets in Resources */,
 				497E71CB2C5DC95D0099D0DD /* Base in Resources */,
-				497E71C62C5DC95B0099D0DD /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,14 +541,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				497E72092C5DCCC80099D0DD /* ArticleDetailVC.swift in Sources */,
+				497E72232C5E2A7F0099D0DD /* Constants.swift in Sources */,
 				497E71FB2C5DCC990099D0DD /* ArticleRepository.swift in Sources */,
 				497E72192C5E1B730099D0DD /* CheckNetworkReachability.swift in Sources */,
+				497E721B2C5E1CC90099D0DD /* NetworkManager.swift in Sources */,
 				497E71BF2C5DC95B0099D0DD /* AppDelegate.swift in Sources */,
+				497E72212C5E28C20099D0DD /* ArticleEnum.swift in Sources */,
 				497E720D2C5DCCC80099D0DD /* ArticleVC.swift in Sources */,
 				497E71FE2C5DCCA10099D0DD /* MyExtensions.swift in Sources */,
+				497E721D2C5E1E270099D0DD /* NetworkConstants.swift in Sources */,
 				497E71F22C5DCC7D0099D0DD /* ArticleModels.swift in Sources */,
 				497E720A2C5DCCC80099D0DD /* ArticleCell.swift in Sources */,
 				497E71F52C5DCC870099D0DD /* BaseApiConfiguration.swift in Sources */,
+				497E721F2C5E215C0099D0DD /* NetworkResponse.swift in Sources */,
 				497E71C12C5DC95B0099D0DD /* SceneDelegate.swift in Sources */,
 				497E71F82C5DCC910099D0DD /* ArticleEndPoints.swift in Sources */,
 				497E720C2C5DCCC80099D0DD /* ArticleListViewModel.swift in Sources */,

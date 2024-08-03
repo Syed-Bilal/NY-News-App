@@ -16,15 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fF5-nX-EUd">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fF5-nX-EUd">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dzn-ca-eiU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="dzn-ca-eiU" firstAttribute="bottom" secondItem="fF5-nX-EUd" secondAttribute="bottom" id="Eon-4l-4gQ"/>
+                            <constraint firstAttribute="bottom" secondItem="fF5-nX-EUd" secondAttribute="bottom" id="Eon-4l-4gQ"/>
                             <constraint firstItem="fF5-nX-EUd" firstAttribute="top" secondItem="dzn-ca-eiU" secondAttribute="top" id="Gxg-YF-z2m"/>
                             <constraint firstItem="dzn-ca-eiU" firstAttribute="trailing" secondItem="fF5-nX-EUd" secondAttribute="trailing" id="bg9-LO-37C"/>
                             <constraint firstItem="fF5-nX-EUd" firstAttribute="leading" secondItem="dzn-ca-eiU" secondAttribute="leading" id="uwg-dQ-3jG"/>

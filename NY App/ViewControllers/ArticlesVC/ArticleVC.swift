@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import SVProgressHUD
 
 class ArticleVC: UIViewController {
 
@@ -25,6 +26,9 @@ class ArticleVC: UIViewController {
         
         setTableView()
         loadRefresher()
+        setObservers()
+        
+        SVProgressHUD.show()
         viewModel?.getArticlesApi()
     }
     
@@ -45,7 +49,29 @@ class ArticleVC: UIViewController {
     // MARK: - refreshData()
     @objc func refreshData() {
         viewModel?.getArticlesApi()
-        refresher.endRefreshing()
+    }
+    
+    // MARK: - setObservers()
+    private func setObservers() {
+        viewModel?.$notifyTableViewReload.subscribe(on: DispatchQueue.main).sink { value in
+            if let value = value {
+                if self.refresher.isRefreshing {
+                    self.refresher.endRefreshing()
+                }
+                if SVProgressHUD.isVisible() {
+                    SVProgressHUD.dismiss()
+                }
+                self.tableView.reloadData()
+                self.viewModel?.notifyTableViewReload = nil
+            }
+        }.store(in: &cancelables)
+        
+        viewModel?.$errorMessage.subscribe(on: DispatchQueue.main).sink { value in
+            if let value = value {
+                self.showAlertDialog(title: "Alert", message: value, isTwoButtonDialog: false, callback: {})
+                self.viewModel?.errorMessage = nil
+            }
+        }.store(in: &cancelables)
     }
 }
 
@@ -53,12 +79,14 @@ class ArticleVC: UIViewController {
 extension ArticleVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return viewModel?.articleArray?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: ArticleCell.identifier, for: indexPath) as? ArticleCell {
-            cell.data = ""
+            if let data = viewModel?.articleArray?[indexPath.row] {
+                cell.data = data
+            }
             return cell
         }
         return UITableViewCell()

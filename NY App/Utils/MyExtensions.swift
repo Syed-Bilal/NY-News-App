@@ -23,3 +23,26 @@ extension UIView {
     }
     
 }
+
+extension UIViewController {
+    
+    func showAlertDialog(title: String, message: String, isTwoButtonDialog: Bool, callback: @escaping () -> ()) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        if isTwoButtonDialog {
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (_) in
+                alert.dismiss(animated: true)
+            }
+            cancel.setValue(UIColor.systemRed, forKey: "titleTextColor")
+            alert.addAction(cancel)
+        }
+        let ok = UIAlertAction(title: "OK", style: .default) { (_) in
+            alert.dismiss(animated: true)
+            callback()
+        }
+        alert.addAction(ok)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+}
