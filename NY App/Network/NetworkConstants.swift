@@ -7,7 +7,7 @@
 
 import Foundation
 
-let NY_API_KEY = "bj0i3ZOxRUb233mXOhvLO0KxBhntg0Ld"
+let NY_API_KEY = "YOUR_API_KEY"
 let BASE_URL = "http://api.nytimes.com/svc/"
 
 
