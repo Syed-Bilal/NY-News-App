@@ -1,5 +1,5 @@
 //
-//  Constant.swift
+//  NetworkConstants.swift
 //  NY App
 //
 //  Created by Syed Bilal on 03/08/2024.
