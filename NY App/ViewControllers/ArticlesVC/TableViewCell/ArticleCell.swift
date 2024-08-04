@@ -34,7 +34,6 @@ class ArticleCell: UITableViewCell {
                 }
             }
             
-            
             if let media = data.media?.first {
                 let type = ArticleMediaTypeEnum.fromString(rawValue: media.type ?? "")
                 if type == .image {

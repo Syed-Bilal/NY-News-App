@@ -24,8 +24,11 @@ extension UIView {
     
 }
 
+// MARK: - UIViewController
 extension UIViewController {
     
+    
+    // MARK: - showAlertDialog()
     func showAlertDialog(title: String, message: String, isTwoButtonDialog: Bool, callback: @escaping () -> ()) {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -45,4 +48,41 @@ extension UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+}
+
+// MARK: - String
+extension String {
+    
+    
+    // MARK: - getDateFromString()
+    func getDateFromString(dateFormate: String) -> Date? {
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = dateFormate
+        if let date = dateFormatterGet.date(from: self) {
+            return date
+        } else {
+            print("There was an error decoding the string")
+            return nil
+        }
+    }
+}
+
+// MARK: - Date
+extension Date {
+    
+    
+    // Convert UTC (or GMT) to local time
+    // MARK: - toLocalTime()
+    func toLocalTime() -> Date {
+        let timezone = TimeZone.current
+        let seconds = TimeInterval(timezone.secondsFromGMT(for: self))
+        return Date(timeInterval: seconds, since: self)
+    }
+    
+    // MARK: - getFormatedStringFromDate()
+    func getFormatedStringFromDate(formate: String) -> String {
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = formate
+        return dateFormatterPrint.string(from: self)
+    }
 }

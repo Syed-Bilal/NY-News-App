@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ArticleVC.swift
 //  NY Techno App
 //
 //  Created by Syed Bilal on 03/08/2024.
@@ -95,8 +95,9 @@ extension ArticleVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         if let vc = storyBoard.instantiateViewController(withIdentifier: "ArticleDetailVC") as? ArticleDetailVC {
+            vc.data = viewModel?.articleArray?[indexPath.row]
             vc.modalPresentationStyle = .fullScreen
-            self.navigationItem.backButtonTitle = "Back"
+            self.navigationItem.backButtonTitle = ""
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

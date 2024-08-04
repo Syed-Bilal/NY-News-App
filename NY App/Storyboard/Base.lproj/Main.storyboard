@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oCF-Wx-cNj">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -46,13 +46,107 @@
                     <view key="view" contentMode="scaleToFill" id="PPH-ct-yMH">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ZN-Pi-heg">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R8q-P2-m1v">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="393.66666666666669"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="f3a-0A-giY">
+                                                <rect key="frame" x="16" y="16" width="361" height="361.66666666666669"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Willing to Die for MrBeast (and $5 Million)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuV-s9-Kd7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="361" height="57.333333333333336"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Willing to Die for MrBeast (and $5 Million)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQN-wU-TKR">
+                                                        <rect key="frame" x="0.0" y="67.333333333333343" width="361" height="19.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-Img-ic" translatesAutoresizingMaskIntoConstraints="NO" id="vZk-8a-8Tp">
+                                                        <rect key="frame" x="0.0" y="96.666666666666657" width="361" height="150"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="150" id="hJI-iN-xfG"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="myCornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday, 24 Jan, 2024" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f18-xs-yMv">
+                                                        <rect key="frame" x="0.0" y="256.66666666666669" width="361" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Madison Malone Kircher" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVy-46-r61">
+                                                        <rect key="frame" x="0.0" y="283.66666666666669" width="361" height="19.333333333333314"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Article Link:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98c-Jn-Md3">
+                                                        <rect key="frame" x="0.0" y="313" width="361" height="19.333333333333314"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Link:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URt-G4-NYI">
+                                                        <rect key="frame" x="0.0" y="342.33333333333331" width="361" height="19.333333333333314"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" systemColor="linkColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="f3a-0A-giY" firstAttribute="leading" secondItem="R8q-P2-m1v" secondAttribute="leading" constant="16" id="CXg-5O-3lQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="f3a-0A-giY" secondAttribute="trailing" constant="16" id="HFZ-3b-FXd"/>
+                                            <constraint firstAttribute="bottom" secondItem="f3a-0A-giY" secondAttribute="bottom" constant="16" id="RjX-Wu-0Hu"/>
+                                            <constraint firstItem="f3a-0A-giY" firstAttribute="top" secondItem="R8q-P2-m1v" secondAttribute="top" constant="16" id="qAc-xC-9ks"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="R8q-P2-m1v" firstAttribute="width" secondItem="5ZN-Pi-heg" secondAttribute="width" id="3kw-QB-IOV"/>
+                                    <constraint firstItem="R8q-P2-m1v" firstAttribute="leading" secondItem="5ZN-Pi-heg" secondAttribute="leading" id="M3g-UL-Zlv"/>
+                                    <constraint firstAttribute="trailing" secondItem="R8q-P2-m1v" secondAttribute="trailing" id="dBZ-gK-Tl7"/>
+                                    <constraint firstItem="R8q-P2-m1v" firstAttribute="top" secondItem="5ZN-Pi-heg" secondAttribute="top" id="duZ-bK-BsC"/>
+                                    <constraint firstAttribute="bottom" secondItem="R8q-P2-m1v" secondAttribute="bottom" id="vQd-eK-mIX"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="41M-qN-k0f"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="tqy-C4-elx"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6aA-Sy-6Zx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5ZN-Pi-heg" firstAttribute="leading" secondItem="6aA-Sy-6Zx" secondAttribute="leading" id="Flg-4n-lXi"/>
+                            <constraint firstAttribute="bottom" secondItem="5ZN-Pi-heg" secondAttribute="bottom" id="KcE-HY-SiY"/>
+                            <constraint firstItem="5ZN-Pi-heg" firstAttribute="trailing" secondItem="6aA-Sy-6Zx" secondAttribute="trailing" id="Ndi-v6-8rR"/>
+                            <constraint firstItem="5ZN-Pi-heg" firstAttribute="top" secondItem="6aA-Sy-6Zx" secondAttribute="top" id="aLK-fi-rof"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="abstractLbl" destination="DQN-wU-TKR" id="FuO-Mz-9lH"/>
+                        <outlet property="authorLbl" destination="hVy-46-r61" id="Kg5-vN-ENX"/>
+                        <outlet property="dateLbl" destination="f18-xs-yMv" id="PJ9-Ut-BYj"/>
+                        <outlet property="imgView" destination="vZk-8a-8Tp" id="q7S-G3-0jg"/>
+                        <outlet property="linkLbl" destination="URt-G4-NYI" id="rmz-4O-AI6"/>
+                        <outlet property="titleLbl" destination="QuV-s9-Kd7" id="GMX-i4-fym"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g5U-EA-Sa6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1709" y="4"/>
+            <point key="canvasLocation" x="1707.6335877862596" y="3.5211267605633805"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bbV-6c-GY1">
@@ -74,8 +168,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="default-Img-ic" width="50" height="50"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
